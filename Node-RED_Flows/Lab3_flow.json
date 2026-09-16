@@ -1,0 +1,194 @@
+
+
+[
+    {
+        "id": "18391140f62de44b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "b34b033e13f3ed74",
+        "type": "ui_gauge",
+        "z": "18391140f62de44b",
+        "name": "",
+        "group": "714ced6fa6d971e0",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "gtype": "compass",
+        "title": "Compass Heading",
+        "label": "degree",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "13.1",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 730,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7de64a0c385f1f6d",
+        "type": "file in",
+        "z": "18391140f62de44b",
+        "name": "",
+        "filename": "/tmp/CompassDegree.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "b34b033e13f3ed74",
+                "04a92e588ed9d475"
+            ]
+        ]
+    },
+    {
+        "id": "256e5874ef215126",
+        "type": "inject",
+        "z": "18391140f62de44b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "7de64a0c385f1f6d",
+                "e10dffa6bff673db"
+            ]
+        ]
+    },
+    {
+        "id": "04a92e588ed9d475",
+        "type": "debug",
+        "z": "18391140f62de44b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "e10dffa6bff673db",
+        "type": "file in",
+        "z": "18391140f62de44b",
+        "name": "",
+        "filename": "/tmp/CompassDir.txt",
+        "filenameType": "str",
+        "format": "utf8",
+        "chunk": false,
+        "sendError": false,
+        "encoding": "none",
+        "allProps": false,
+        "x": 400,
+        "y": 300,
+        "wires": [
+            [
+                "3d407642915c38f5",
+                "a3b0ed670a98ac6b"
+            ]
+        ]
+    },
+    {
+        "id": "3d407642915c38f5",
+        "type": "ui_text",
+        "z": "18391140f62de44b",
+        "group": "714ced6fa6d971e0",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Cardinal Direction",
+        "format": "{{msg.payload}}",
+        "layout": "row-spread",
+        "className": "",
+        "style": true,
+        "font": "",
+        "fontSize": "24",
+        "color": "#000000",
+        "x": 650,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a3b0ed670a98ac6b",
+        "type": "debug",
+        "z": "18391140f62de44b",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "714ced6fa6d971e0",
+        "type": "ui_group",
+        "name": "Robot Diagnostics",
+        "tab": "e798e2d091d0674a",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e798e2d091d0674a",
+        "type": "ui_tab",
+        "name": "Hometab",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "6457954d2e8bd987",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
