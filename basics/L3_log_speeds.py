@@ -10,4 +10,4 @@ while True:
     lg.tmpFile(wheelspeeds[0], 'pdl.txt')
     lg.tmpFile(wheelspeeds[1], 'pdr.txt')
     print(chassisspeeds,wheelspeeds)
-    time.sleep(1)
+    time.sleep(0.1)
