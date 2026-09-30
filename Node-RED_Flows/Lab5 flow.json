@@ -1,0 +1,73 @@
+[
+    {
+        "id": "71afbf7842128ef3",
+        "type": "ui_chart",
+        "z": "18391140f62de44b",
+        "name": "",
+        "group": "25cda7a658253924",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Right Wheel (rad/s)",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "-10",
+        "ymax": "10",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "60",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 870,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "25cda7a658253924",
+        "type": "ui_group",
+        "name": "Wheel Speeds",
+        "tab": "e798e2d091d0674a",
+        "order": 3,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "e798e2d091d0674a",
+        "type": "ui_tab",
+        "name": "Hometab",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c50e4f963a24aa6e",
+        "type": "global-config",
+        "env": [],
+        "modules": {
+            "node-red-dashboard": "3.6.6"
+        }
+    }
+]
